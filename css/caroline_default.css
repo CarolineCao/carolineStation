@@ -1,0 +1,38 @@
+.site-logo {
+    float: left;
+    margin: .5em .5em .5em .5em;
+    line-height: 0!important;
+}
+.site-brand{
+    width: 300px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -80px;
+}
+.site-brand_logo{
+    width: 110px;
+    height: 110px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -65px;
+    margin-top: -65px;
+}
+.home {
+    height: 100vh;
+    background-image:
+    linear-gradient(
+            #C3ACC4,#E5B2BC, #F4D3B5,#F7EEB9,#C0E0E8,#4D99A2
+    );
+}
+
+
+.navbar{
+    width: 100%;
+    position: absolute;
+    background-color: rgba(100,100,0,.1);
+}
+
