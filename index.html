@@ -53,6 +53,29 @@
     <a href="#" class="site-brand"><img class="site-brand_logo" src="image\FaceQ.png" >
         <img src="image\theknot.svg" >
     </a>
+    <div id="container">
+        <div class="ocean">
+            <div class="layer sea" data-depth="0.80"><img src="image/wavedark.png"></div>
+            <div class="layer sea" data-depth="0.60"><img src="image/wavelight.png"></div>
+            <div class="layer sea" data-depth="0.40"><img src="image/waveWhite.png"></div>
+        </div>
+        <div class="lighthouse">
+            <div class="layer lighthouse" data-depth="0.50"><img src="image/lighthouse.png"></div>
+        </div>
+        <div class="hills">
+            <!-- TODO: Put hills  -->
+        </div>
+
+
+        <!--<ul id="scene" class="scene">-->
+            <!--<li class="layer" data-depth="0.80"><img src="image/wavedark.png"></li>-->
+            <!--<li class="layer" data-depth="0.50"><img src="image/lighthouse.png"></li>-->
+            <!--<li class="layer" data-depth="0.60"><img src="image/wavelight.png"></li>-->
+            <!--<li class="layer" data-depth="0.40"><img src="image/waveWhite.png"></li>-->
+        <!--</ul>-->
+    </div>
+</div>
+<div class="section2">
 
 </div>
 
@@ -62,5 +85,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<!-- Scripts -->
+<script src="js/parallax.min.js"></script>
+<script>
+
+    // Pretty simple huh?
+    var scene = document.getElementById('container');
+    var parallax = new Parallax(scene, {
+        limitY: 39,
+    });
+
+</script>
 </body>
 </html>
