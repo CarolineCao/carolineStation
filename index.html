@@ -50,26 +50,28 @@
 
 </nav>
 <div class="gradient">
-    <a href="#" class="site-brand"><img class="site-brand_logo" src="image\FaceQ.png" >
-        <img src="image\theknot.svg" ><br>
-    </a>
-    <div id="container">
-        <div class="ocean">
-            <div class="layer sea" data-depth="0.60"><img src="image/wavelight.png"></div>
-            <div class="layer sea" data-depth="0.80"><img src="image/wavedark.png"></div>
-            <div class="layer sea" data-depth="0.40"><img src="image/waveWhite.png"></div>
-        </div>
-        <div class="lighthouse">
-            <div class="layer lighthouse" data-depth="0.50"><img src="image/lighthouse.png"></div>
-        </div>
-        <div class="chicagoSkyline">
-            <div class="layer chicagoSkyline" data-depth="1.0"><img src="image/chicagoSkyline.png"></div>
-        </div>
-        <div class="boat">
-            <div class="layer boat" data-depth="0.5"><img src="image/boat2.png"></div>
+    <div class="stars"> </div>
+        <a href="#" class="site-brand"><img class="site-brand_logo" src="image\FaceQ.png" >
+            <img src="image\theknot.svg" ><br>
+        </a>
+        <div id="container">
+            <div class="ocean">
+                <div class="layer sea" data-depth="0.60"><img src="image/wavelight.png"></div>
+                <div class="layer sea" data-depth="0.80"><img src="image/wavedark.png"></div>
+                <div class="layer sea" data-depth="0.40"><img src="image/waveWhite.png"></div>
+            </div>
+            <div class="lighthouse">
+                <div class="layer lighthouse" data-depth="0.50"><img src="image/lighthouse.png"></div>
+            </div>
+            <div class="chicagoSkyline">
+                <div class="layer chicagoSkyline" data-depth="1.0"><img src="image/chicagoSkyline.png"></div>
+            </div>
+            <div class="boat">
+                <div class="layer boat" data-depth="0.5"><img src="image/boat2.png"></div>
+            </div>
+
         </div>
 
-    </div>
 </div>
 <div class="undersea"></div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -85,6 +87,30 @@
     var parallax = new Parallax(scene, {
         limitY: 39,
     });
+    setTimeout(
+            function()
+            {
+                $(document).ready(function() {
+                    var stars = 800;
+                    var $stars = $(".stars");
+                    var r = 800;
+                    for (var i = 0; i < stars; i++) {
+                        var $star = $("<div/>").addClass("star");
+                        $stars.append($star);
+                    }
+                    $(".star").each(function() {
+                        var cur = $(this);
+                        var s = 0.2 + (Math.random() * 1);
+                        var curR = r + (Math.random() * 300);
+                        cur.css({
+                            transformOrigin: "0 0 " + curR + "px",
+                            transform: " translate3d(0,0,-" + curR + "px) rotateY(" + (Math.random() * 360) + "deg) rotateX(" + (Math.random() * -50) + "deg) scale(" + s + "," + s + ")"
+
+                        })
+                    })
+                })
+            }, 3000);
+
 
 </script>
 </body>

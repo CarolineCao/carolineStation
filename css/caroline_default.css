@@ -21,13 +21,6 @@
     margin-left: -65px;
     margin-top: -65px;
 }
-.home {
-    height: 100vh;
-    background-image:
-    linear-gradient(
-            #C3ACC4,#E5B2BC, #F4D3B5,#F7EEB9,#C0E0E8,#4D99A2
-    );
-}
 
 
 .navbar{
@@ -35,53 +28,6 @@
     background-color: rgba(100,100,0,.1);
 }
 
-.home #container {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    padding: 0;
-    overflow: hidden;
-    height: 100%;
-}
-    .home #container .ocean {
-        margin: 0 0 15vh -10%;
-        position: absolute;
-        bottom: 0px;
-    }
-        .home #container .ocean .sea:nth-child(1) {
-            z-index: 4;
-        }
-        .home #container .ocean .sea:nth-child(2) {
-            z-index: 90;
-            margin-top: 15px;
-        }
-        .home #container .ocean .sea:nth-child(3) {
-            z-index: 100;
-            margin-top: 18px;
-        }
-    /* TODO: adjust different ocean layer position */
-    .home #container .lighthouse {
-        margin: 0 0 10vh 35px;
-        position: absolute;
-        bottom: 450px;
-        z-index: 5;
-    }
-
-    .home #container .boat {
-        margin: 0 0 10vh 390px;
-        position: absolute;
-        bottom: 80px;
-        z-index: 6;
-    }
-    .home #container .lighthouse .lighthouse {
-
-    }
-    .home #container .chicagoSkyline {
-        margin: 0 0 10vh 75vh;
-        position: absolute;
-        bottom: 260px;
-        z-index: -2;
-    }
 
 
 
@@ -89,6 +35,13 @@
     0%   { background-size: 100% 100%; }
     100% { background-size: 100% 500%; }
 }
+
+@-webkit-keyframes nightStars {
+    0%   { opacity: 0.0; }
+    20%   { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
 
 .gradient {
     height: 90vh;
@@ -107,8 +60,9 @@
             #2d345e 93%,
             #091b41 100% );
     background-size: 100% 100%;
-    -webkit-animation: sunset 30.0s ease-in-out;
-    -webkit-animation-delay: 3.0s;
+    -webkit-animation: sunset 15.0s linear;
+    -webkit-animation-delay: 1.0s;
+    animation-fill-mode: forwards;
     overflow: hidden;
     position: relative;
 }
@@ -175,5 +129,35 @@
     background-color: #74C8EC;
 }
 
+.stars{
+    transform:perspective(500px);
+    transform-style:preserve-3d;
+    position:absolute;
+    bottom:0;
+    perspective-origin:50% 100%;
+    left:50%;
+    animation:rotate 90s infinite linear;
+}
+.star{
+    width:2px;
+    height:2px;
+    background:#F7F7B6;
+//border-radius:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transform-origin:0 0 -300px;
+    transform:translate3d(0,0,-300px);
+    backface-visibility:hidden;
+}
+
+@keyframes rotate{
+    0%{
+        transform:perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+    }
+    100%{
+        transform:perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+    }
+}
 
 
