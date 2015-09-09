@@ -22,15 +22,38 @@
     margin-top: -65px;
 }
 
-
+.carolineName {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 85px;
+    color: #ABC7C0;
+    font-size: xx-large;
+}
+.carolinePosition{
+    position: absolute;
+    margin-top: 69px;
+    margin-left: 80px;
+    color: #EAEAEA;
+    font-size: small;
+}
 .navbar{
     width: 100%;
     background-color: rgba(100,100,0,.1);
 }
+.navbar-default .navbar-brand {
+    color: white;
+}
 
+.navbar-default .navbar-brand:hover {
+    color: #dddddd;
+}
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
 
-
-
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #dddddd; /*Sets the text hover color on navbar*/
+}
 @-webkit-keyframes sunset {
     0%   { background-size: 100% 100%; }
     100% { background-size: 100% 500%; }
@@ -96,14 +119,15 @@
 
 }
 /* TODO: adjust different ocean layer position */
-.gradient #container .lighthouse {
-    margin: 0 0 10vh 35px;
-    position: absolute;
-    bottom: 450px;
-    z-index: 5;
+@media screen and (min-width: 756px) {
+    .gradient #container .lighthouse {
+        margin: 0 0 10vh 35px;
+        position: absolute;
+        bottom: 450px;
+        z-index: 5;
 
+    }
 }
-
 .gradient #container .boat {
     margin: 0 0 10vh 390px;
     position: absolute;
@@ -121,7 +145,7 @@
 }
 
 .undersea{
-    height: 115vh;
+    height: 110vh;
     background-image:
     linear-gradient(
     #74C8EC,#1A58A8
@@ -159,5 +183,489 @@
         transform:perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
     }
 }
+@keyframes myfirst
+{
+    0% {margin-left: -235px;margin-top:100vh;}
+    70% {margin-left: 100%;margin-top:100vh;}
+    100% {margin-left: 100%;margin-top:100vh;}
+}
+.fish{
+    background-image: url(../image/fish.png);
+    width: 235px;
+    height: 104px;
+    margin-left: -235px;
+    position: absolute;
+    animation: myfirst 12s;
+    -webkit-animation: myfirst 12s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+
+#fish{
+    top: 560px;
+}
+
+#fish2{
+    top: 220px;
+    animation-delay: 6s;
+    -webkit-animation-delay: 6s;
+}
 
 
+.undersea .whale * {
+    position: absolute;
+}
+.undersea .whale *:before,
+.undersea .whale *:after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+.undersea .whale {
+    position: absolute;
+    background: #8596ad;
+    width: 200px;
+    height: 110px;
+    border-radius: 70px 8px 70px 0;
+    margin-top: 100px;
+    margin-left: 300px;
+}
+.undersea .whale .eye {
+
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    top: 25px;
+    right: 90px;
+    border-radius: 100%;
+}
+.undersea .whale .eye:after {
+    height: 10px;
+    width: 10px;
+    background: #000;
+    border-radius: 100%;
+    top: 2px;
+    left: 8px;
+}
+.undersea .whale .mouth {
+    right: 0;
+    top: 20px;
+    width: 80px;
+    height: 90px;
+    background: #ddd;
+    border-top-left-radius: 70px 50px;
+    border-bottom-right-radius: 65px;
+    border-top: 4px solid #000;
+    border-left: 2px solid #000;
+    box-sizing: border-box;
+}
+.undersea .whale .mouth:before {
+    height: 55px;
+    width: 50px;
+    background: #ddd;
+    right: 100%;
+    bottom: 0;
+    border-radius: 50px 0 0 0;
+}
+.undersea .whale .mouth:after {
+    height: 20px;
+    width: 30px;
+    top: 13px;
+    right: 71px;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom: 3px solid #000;
+    -webkit-transform: rotate(-20deg);
+    display: none;
+}
+.undersea .whale .mouth .corner {
+    height: 30px;
+    width: 30px;
+    background: #ddd;
+    top: 28px;
+    right: 68px;
+}
+.undersea .whale .mouth .corner:after {
+    height: 20px;
+    width: 40px;
+    background: #8596ad;
+    top: -11px;
+    left: -13px;
+    border-bottom-right-radius: 100%;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    clip: rect(0, 38px, 23px, 0);
+}
+.undersea .whale .mouth .lines {
+    left: -47px;
+    bottom: 0px;
+    overflow: hidden;
+    height: 90px;
+    width: 125px;
+    border-bottom-right-radius: 65px;
+}
+.undersea .whale .mouth .lines .line {
+    height: 100px;
+    width: 30px;
+    border-right: 4px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 100%;
+    bottom: -4px;
+}
+.undersea .whale .mouth .lines .l1 {
+     height: 49px;
+     left: 0px;
+ }
+.undersea .whale .mouth .lines .l2 {
+    height: 64px;
+    left: 22px;
+}
+.undersea .whale .mouth .lines .l3 {
+    height: 78px;
+    left: 44px;
+}
+.undersea .whale .mouth .lines .l4 {
+    height: 86px;
+    left: 66px;
+}
+.undersea .whale .mouth .lines .l5 {
+    height: 80px;
+    left: 87px;
+    bottom: 3px;
+}
+.undersea .whale .pectoral-fin {
+    background: #5c6f89;
+    height: 35px;
+    width: 35px;
+    right: 135px;
+    top: 55px;
+    border-radius: 20px 0 20px 0;
+}
+.undersea .whale .dorsal-fin {
+    background: #8596ad;
+    height: 22px;
+    width: 25px;
+    left: -13px;
+    top: 50px;
+    border-radius: 15px 0 0 0;
+    display: none;
+}
+.undersea .whale .tail-fins {
+    left: -35px;
+    top: 85px;
+    width: 60px;
+}
+.undersea .whale .tail-fins:before, .whale .tail-fins:after {
+    background: #8596ad;
+}
+.undersea .whale .tail-fins:before {
+    height: 25px;
+    width: 55px;
+    left: 0px;
+    top: 0px;
+    border-radius: 20px 0 0 3px;
+}
+.undersea .whale .tail-fins:after {
+    height: 55px;
+    width: 25px;
+    right: 0px;
+    top: 5px;
+    border-radius: 0 0 20px 3px;
+}
+.undersea .whale .spout {
+    background: #5c6f89;
+    background: rgba(0, 0, 0, 0.5);
+    height: 6px;
+    width: 16px;
+    border-radius: 100%;
+    left: 60px;
+    top: 2px;
+    opacity: 1;
+}
+.undersea .whale .spout .spray {
+    border-top: 60px dashed rgba(115, 204, 255, 0.7);
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    height: 0;
+    width: 10px;
+    border-radius: 14px;
+    top: -56px;
+    left: -11px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .whale .spout .spray {
+        border-top: 60px solid rgba(115, 204, 255, 0.7);
+    }
+}
+.whale .spout .puff1,
+.whale .spout .puff2,
+.whale .spout .puff3 {
+    background: #87d3ff;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    margin-left: -15px;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+.whale .spout .puff1 {
+    top: -75px;
+    left: 8px;
+    -webkit-animation: puff-movement .7s .15s infinite;
+    animation: puff-movement .7s .15s infinite;
+}
+.whale .spout .puff2 {
+    top: -67px;
+    left: -12px;
+    -webkit-animation: puff-movement .8s .3s infinite;
+    animation: puff-movement .8s .3s infinite;
+}
+.whale .spout .puff3 {
+    top: -67px;
+    left: 28px;
+    -webkit-animation: puff-movement .6s infinite;
+    animation: puff-movement .6s infinite;
+}
+.whale .spout .drop1,
+.whale .spout .drop2,
+.whale .spout .drop3 {
+    background: #87d3ff;
+    border-radius: 15px;
+    opacity: 0;
+}
+.whale .spout .drop1,
+.whale .spout .drop3 {
+    height: 11px;
+    width: 11px;
+}
+.whale .spout .drop1 {
+    border-bottom-right-radius: 0;
+    top: -65px;
+    left: -12px;
+    -webkit-animation: drop1-movement 1.15s .2s infinite;
+    animation: drop1-movement 1.15s .2s infinite;
+}
+.whale .spout .drop2 {
+    border-bottom-left-radius: 0;
+    top: -65px;
+    left: 0px;
+    height: 13px;
+    width: 13px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: drop2-movement 1.2s .4s infinite;
+    animation: drop2-movement 1.2s .4s infinite;
+}
+.whale .spout .drop3 {
+    border-bottom-left-radius: 0;
+    top: -65px;
+    left: 16px;
+    -webkit-animation: drop3-movement 1.1s infinite;
+    animation: drop3-movement 1.1s infinite;
+}
+
+@-webkit-keyframes puff-movement {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: -6px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+@keyframes puff-movement {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: -6px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+@-webkit-keyframes drop1-movement {
+    0% {
+        top: -65px;
+        left: -9px;
+        opacity: .6;
+    }
+    40% {
+        opacity: .6;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        top: -100px;
+        left: -32px;
+        opacity: 0;
+    }
+}
+@keyframes drop1-movement {
+    0% {
+        top: -65px;
+        left: -9px;
+        opacity: .6;
+    }
+    40% {
+        opacity: .6;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        top: -100px;
+        left: -32px;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes drop2-movement {
+    0% {
+        top: -65px;
+        opacity: .6;
+    }
+    40% {
+        opacity: .6;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        top: -120px;
+        opacity: 0;
+    }
+}
+@keyframes drop2-movement {
+    0% {
+        top: -65px;
+        opacity: .6;
+    }
+    40% {
+        opacity: .6;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        top: -120px;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes drop3-movement {
+    0% {
+        top: -65px;
+        left: 13px;
+        opacity: .6;
+    }
+    40% {
+        opacity: .6;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        top: -100px;
+        left: 36px;
+        opacity: 0;
+    }
+}
+@keyframes drop3-movement {
+    0% {
+        top: -65px;
+        left: 13px;
+        opacity: .6;
+    }
+    40% {
+        opacity: .6;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        top: -100px;
+        left: 36px;
+        opacity: 0;
+    }
+}
+
+.browserFrame {
+    position: absolute;
+    /*cursor: pointer;*/
+    /*width: 120vh;*/
+    /*margin-top: 200px;*/
+    /*margin-left: 10%;*/
+    /*height: 80vh;*/
+    /*border-radius: 15px;*/
+}
+.browserFrame img{
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+.iphoneFrame {
+    position: absolute;
+    font-size: 26px;
+    cursor: pointer;
+    width: 120vh;
+    margin-top: 190px;
+    margin-left: 70%;
+    height: 80vh;
+    border-radius: 15px;
+
+}
+.carousel-inner  .item  img,
+.carousel-inner  .item  a  img {
+    margin: 69px 11px auto 11px;
+
+}
+.container.websiteContainer {
+    position: absolute;
+    margin: 190px 0 auto 0;
+    /*margin-left:40%*/
+    /*width:442px;*/
+}
+.carousel-control {
+    height: 20%;
+    margin: 190px 0 auto 0;
+}
+
+@media (max-width: 768px) {
+    .container.websiteContainer {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    .container.websiteContainer {
+        width: 590px;
+        margin-left:5%;
+    }
+    .browserFrame img{
+        width: 590px;
+    }
+}
+@media (min-width: 992px) {
+    .container.websiteContainer {
+        width: 790px;
+        margin-left:5%;
+    }
+    .browserFrame img{
+        width: 790px;
+    }
+}
+@media (min-width: 1200px) {
+    .container.websiteContainer {
+        width: 890px;
+        margin-left:5%;
+    }
+    .browserFrame img{
+        width: 890px;
+    }
+}
