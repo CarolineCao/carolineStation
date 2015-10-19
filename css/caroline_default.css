@@ -7,7 +7,7 @@ body {
     line-height: 0!important;
 }
 .site-brand{
-    width: 300px;
+    width: 281px;
     height: 160px;
     position: absolute;
     left: 50%;
@@ -28,16 +28,18 @@ body {
 .carolineName {
     position: absolute;
     margin-top: 30px;
-    margin-left: 85px;
     color: #ABC7C0;
     font-size: xx-large;
+    width: 100%;
+    text-align: center;
 }
 .carolinePosition{
     position: absolute;
     margin-top: 69px;
-    margin-left: 80px;
     color: #EAEAEA;
     font-size: small;
+    width: 100%;
+    text-align: center;
 }
 .navbar{
     width: 100%;
@@ -788,6 +790,7 @@ body {
     position: absolute;
     margin-top: 300px;
     margin-left: 200px;
+    z-index: 10;
 }
 
 
@@ -797,6 +800,7 @@ body {
     position: absolute;
     margin-top: 195px;
     margin-left: 130px;
+    z-index: 10;
     -webkit-animation: rotateContent 5s linear infinite;
     animation: rotateContent 5s linear infinite;
 }
@@ -940,6 +944,7 @@ body {
     position:relative;
     display:block;
     margin-top: 20px;
+    z-index: 10;
 
     background:#eee;
     height:35px;
